@@ -94,5 +94,33 @@ namespace PriorityQueue
                 throw new Exception("Full");
             }
         }
+
+        public string Print()
+        {
+            string[] stringArray = new string[maxSize];
+            int counter = 0;
+
+            //Converts Node to string so that it can be sorted (type Node cannot use Array.Sort)
+            foreach (Node n in stackItems)
+            {
+                if(n != null)
+                {
+                    stringArray[counter] = n.priority + " " + n.jobNumber;
+                    counter++;
+                }
+            }
+
+            Array.Sort(stringArray, (x, y) => string.Compare(x, y));
+
+            string container = "";
+
+            foreach(string x in stringArray)
+            {
+                container += x + "\n";
+            }
+
+            //Removes extra white space at beginning
+            return container.Trim();
+        }
     }
 }

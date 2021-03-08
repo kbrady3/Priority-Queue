@@ -13,12 +13,12 @@ namespace PriorityQueue
             Node n3 = new Node(3456, "B");
 
             Node n4 = new Node(4567, "D");
-            Node n5 = new Node(1234, "D");
-            Node n6 = new Node(1234, "D");
-            Node n7 = new Node(1234, "D");
+            Node n5 = new Node(5678, "D");
+            Node n6 = new Node(6789, "D");
+            Node n7 = new Node(7890, "D");
 
-            Node n8 = new Node(1234, "A");
-            Node n9 = new Node(1234, "A");
+            Node n8 = new Node(8901, "A");
+            Node n9 = new Node(9189, "A");
 
             pq.Enqueue(n1);
             pq.Enqueue(n2);
@@ -30,7 +30,7 @@ namespace PriorityQueue
             pq.Enqueue(n8);
             pq.Enqueue(n9);
 
-            //Print the queue in order of priority(highest priority first)
+            Console.WriteLine(pq.Print());
         }
     }
 }
